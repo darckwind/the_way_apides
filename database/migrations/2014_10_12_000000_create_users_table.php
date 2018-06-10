@@ -42,8 +42,8 @@ class CreateUsersTable extends Migration
             $table->string('marca');
             $table->string('modelo');
             $table->string('patente')->unique();
-            $table->string('chasis');
-            $table->string('motor');
+            $table->string('chasis')->unique();
+            $table->string('motor')->unique();
             $table->integer('ano');
             //foreankey
             $table->unsignedInteger('user_id');
